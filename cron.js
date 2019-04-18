@@ -3,6 +3,7 @@ const cronJob = require('cron').CronJob;
 const createCsvWriter = require('csv-writer').createObjectCsvWriter;
 const csvWriter = createCsvWriter({
   path: 'btc-prices.csv',
+  append: true,
   header: [
     {id: 'date', title: 'Date'},
     {id: 'price', title: 'Price'}
